@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp3;
+package tp3ej1;
 
 /**
  *
@@ -57,7 +57,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jlContra.setText("Contraseña:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"))); // NOI18N
         jButton1.setText("Verificar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +103,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        jbOcultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3/imgOcultar.jpeg"))); // NOI18N
+        jbOcultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/imgOcultar.jpeg"))); // NOI18N
         jbOcultar.setText("Ocultar");
         jbOcultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jbVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3/imgVer1.jpeg"))); // NOI18N
+        jbVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/imgVer1.jpeg"))); // NOI18N
         jbVer.setText("Ver");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N

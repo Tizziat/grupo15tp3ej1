@@ -142,7 +142,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/tp3/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"/>
+              <Image iconType="3" name="/tp3ej1/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Verificar"/>
           </Properties>
@@ -155,7 +155,7 @@
     <Component class="javax.swing.JButton" name="jbOcultar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/tp3/imgOcultar.jpeg"/>
+          <Image iconType="3" name="/tp3ej1/imgOcultar.jpeg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ocultar"/>
       </Properties>
@@ -166,7 +166,7 @@
     <Component class="javax.swing.JButton" name="jbVer">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/tp3/imgVer1.jpeg"/>
+          <Image iconType="3" name="/tp3ej1/imgVer1.jpeg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ver"/>
       </Properties>
