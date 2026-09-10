@@ -5,6 +5,8 @@
  */
 package tp3ej1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Luly2
@@ -32,9 +34,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jtfUsuario = new javax.swing.JTextField();
         jlusuario = new javax.swing.JLabel();
-        jtfContraseña = new javax.swing.JTextField();
         jlContra = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jbVerificar = new javax.swing.JButton();
+        jpfContraseña = new javax.swing.JPasswordField();
         jbOcultar = new javax.swing.JButton();
         jbVer = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -57,11 +59,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jlContra.setText("Contraseña:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"))); // NOI18N
-        jButton1.setText("Verificar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbVerificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"))); // NOI18N
+        jbVerificar.setText("Verificar");
+        jbVerificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbVerificarActionPerformed(evt);
             }
         });
 
@@ -74,8 +76,8 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jlContra)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jlusuario)
@@ -84,7 +86,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(131, 131, 131))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(150, 150, 150)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -96,10 +98,10 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(jlusuario))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlContra))
+                    .addComponent(jlContra)
+                    .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -113,6 +115,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jbVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp3ej1/imgVer1.jpeg"))); // NOI18N
         jbVer.setText("Ver");
+        jbVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbVerActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setText("Inicio de sesion");
@@ -175,13 +182,28 @@ public class NewJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jtfUsuarioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVerificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    String usuario = jtfUsuario.getText().trim();
+    String password = new String (jpfContraseña.getPassword());
+    if (usuario.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
+        JOptionPane.showMessageDialog(this, "¡Bienvenido/a!");
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+    }
+
+    }//GEN-LAST:event_jbVerificarActionPerformed
 
     private void jbOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbOcultarActionPerformed
         // TODO add your handling code here:
+        
+        jpfContraseña.setEchoChar('*');
     }//GEN-LAST:event_jbOcultarActionPerformed
+
+    private void jbVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVerActionPerformed
+        // TODO add your handling code here:
+        jpfContraseña.setEchoChar((char)0);
+    }//GEN-LAST:event_jbVerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,15 +241,15 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbOcultar;
     private javax.swing.JButton jbVer;
+    private javax.swing.JButton jbVerificar;
     private javax.swing.JLabel jlContra;
     private javax.swing.JLabel jlusuario;
-    private javax.swing.JTextField jtfContraseña;
+    private javax.swing.JPasswordField jpfContraseña;
     private javax.swing.JTextField jtfUsuario;
     // End of variables declaration//GEN-END:variables
 }

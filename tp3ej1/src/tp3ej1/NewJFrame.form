@@ -82,8 +82,8 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jlContra" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jtfContraseña" min="-2" pref="212" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jpfContraseña" min="-2" pref="206" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
@@ -96,7 +96,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="136" max="-2" attributes="0"/>
+                  <Component id="jbVerificar" min="-2" pref="136" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -111,11 +111,11 @@
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jtfContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlContra" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpfContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="jbVerificar" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace pref="38" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -132,14 +132,12 @@
             <Property name="text" type="java.lang.String" value="Usuario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfContrase&#xf1;a">
-        </Component>
         <Component class="javax.swing.JLabel" name="jlContra">
           <Properties>
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jbVerificar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/tp3ej1/Captura de pantalla_8-9-2026_205330_www.campusvirtual.ulp.edu.ar.jpeg"/>
@@ -147,8 +145,10 @@
             <Property name="text" type="java.lang.String" value="Verificar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbVerificarActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="jpfContrase&#xf1;a">
         </Component>
       </SubComponents>
     </Container>
@@ -170,6 +170,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Ver"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbVerActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel2">
 
